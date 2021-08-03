@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/navigation_activity_main_userContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/navigation_activity_main_userImageContainerCardView"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="48dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/navigation_activity_main_userImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder_user" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/navigation_activity_main_userFullnameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/navigation_activity_main_userImageContainerCardView"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0.88"
+                android:gravity="center_horizontal"
+                android:text="کارشناس لورم ایپسوم"
+                android:textColor="@color/solid"
+                android:textSize="16sp"
+                app:fontFamily="@font/shabnam_bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigation_activity_main_userContainer"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/navigation_activity_main_sendFactorAction"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:onClick="onActionClick"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ارسال فاکتور"
+                app:fontFamily="@font/shabnam_normal" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:scaleType="center"
+                android:src="@drawable/ic_note_add_black_24dp"
+                app:tint="@color/solid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navigation_activity_main_helpAction"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:onClick="onActionClick"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="راهنما"
+                app:fontFamily="@font/shabnam_normal" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:scaleType="center"
+                android:src="@drawable/ic_help_black_24dp"
+                app:tint="@color/solid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navigation_activity_main_supportAction"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:onClick="onActionClick"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ارتباط با پشتیبانی"
+                app:fontFamily="@font/shabnam_normal" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:scaleType="center"
+                android:src="@drawable/ic_call_black_24dp"
+                app:tint="@color/solid" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navigation_activity_main_logOutAction"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:onClick="onActionClick"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="خروج"
+                app:fontFamily="@font/shabnam_normal" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:scaleType="center"
+                android:src="@drawable/ic_exit_to_app_black_24dp"
+                app:tint="@color/solid" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

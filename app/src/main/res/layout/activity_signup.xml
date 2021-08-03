@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="25dp"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_signup_toolbar"
+        android:layout_marginTop="-8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/activity_signup_fullnameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/shabnam_normal"
+                android:hint="نام و نام خانوادگی"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="@color/solid"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/activity_signup_restaurantNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/shabnam_normal"
+                android:hint="نام رستوران"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="@color/solid"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/activity_signup_restaurantAddressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/shabnam_normal"
+                android:hint="آدرس رستوران"
+                android:textColor="@color/solid"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/activity_signup_phoneNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/shabnam_normal"
+                android:gravity="right"
+                android:hint="شماره تلفن"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="gravity"
+                android:textColor="@color/solid"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/activity_signup_emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/shabnam_normal"
+                android:hint="ایمیل"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/solid"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/activity_signup_termsLinkTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/shabnam_normal"
+                    android:text="قوانین را مطالعه کردم و قبول  دارم"
+                    android:textColor="@color/solid"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/activity_signup_agreeCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/activity_signup_processButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:focusable="true"
+            android:fontFamily="@font/shabnam_bold"
+            android:padding="16dp"
+            android:text="ثبت نام"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/activity_signup_toolbar"
+        layout="@layout/toolbar_activity_signup" />
+
+    <RelativeLayout
+        android:id="@+id/activity_signup_loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white90"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

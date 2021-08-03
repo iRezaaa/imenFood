@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main_drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_main_toolbar"
+            android:layout_marginTop="-8dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/activity_main_checkSectionMorning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.333333333333333"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onCheckSectionsClick">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/check_opening" />
+
+                <View
+                    android:id="@+id/activity_main_checkSelectionMorningBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:background="@android:color/black" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/activity_main_checkSectionMorningDoneImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/activity_main_checkSectionMorningTextView"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_done_all_black_36dp"
+                    app:tint="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/activity_main_checkSectionMorningTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:shadowColor="@color/solid"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="چک کردن بازگشایی"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/shabnam_light" />
+
+                <View
+                    android:id="@+id/activity_main_checkSectionMorningToastMakerView"
+                    android:tag="null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:onClick="onToastMakerClick"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_main_checkSectionDuring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.333333333333333"
+                android:animateLayoutChanges="true"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onCheckSectionsClick">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/check_day" />
+
+                <View
+                    android:id="@+id/activity_main_checkSelectionDuringBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:background="@android:color/black" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/activity_main_checkSectionDuringDoneImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/activity_main_checkSectionDuringTextView"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_done_all_black_36dp"
+                    app:tint="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/activity_main_checkSectionDuringTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:shadowColor="@color/solid"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="چک کردن مخصوص روز"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/shabnam_light" />
+
+                <View
+                    android:id="@+id/activity_main_checkSectionDuringToastMakerView"
+                    android:tag="null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:onClick="onToastMakerClick"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_main_checkSectionClosing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.333333333333333"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onCheckSectionsClick">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/check_closing" />
+
+                <View
+                    android:id="@+id/activity_main_checkSelectionClosingBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:background="@android:color/black" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/activity_main_checkSectionClosingDoneImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/activity_main_checkSectionClosingTextView"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_done_all_black_36dp"
+                    app:tint="@android:color/white" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/activity_main_checkSectionClosingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="10dp"
+                    android:shadowColor="@color/solid"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="5"
+                    android:text="چک کردن هنگام تعطیلی"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:fontFamily="@font/shabnam_light" />
+
+                <View
+                    android:id="@+id/activity_main_checkSectionClosingToastMakerView"
+                    android:tag="null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:onClick="onToastMakerClick"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/activity_main_toolbar"
+            layout="@layout/toolbar_activity_main" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_main_loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white90"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/activity_newmain_navigationView"
+        android:layout_width="304dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|end">
+
+        <include layout="@layout/navigation_activity_main" />
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

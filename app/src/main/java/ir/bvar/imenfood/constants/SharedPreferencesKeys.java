@@ -1,0 +1,15 @@
+package ir.bvar.imenfood.constants;
+
+/**
+ * Created by rezapilehvar on 16/1/2018 AD.
+ */
+
+public class SharedPreferencesKeys {
+    public static final String SHARED_PREFERENCES_NAME = "SHARED_PREFERENCES_IMENFOOD";
+    public static final String SHARED_PREFERENCES_AUTH_KEY = "SHARED_PREFERENCES_AUTH_KEY";
+    public static final String SHARED_PREFERENCES_ONESIGNAL_PLAYERID_KEY = "SHARED_PREFERENCES_ONESIGNAL_PLAYERID_KEY";
+
+    public static final String SHARED_PREFERENCES_CHECKUP_MORNING_KEY = "SHARED_PREFERENCES_CHECKUP_MORNING_KEY";
+    public static final String SHARED_PREFERENCES_CHECKUP_DURING_KEY = "SHARED_PREFERENCES_CHECKUP_DURING_KEY";
+    public static final String SHARED_PREFERENCES_CHECKUP_CLOSING_KEY = "SHARED_PREFERENCES_CHECKUP_CLOSING_KEY";
+}
